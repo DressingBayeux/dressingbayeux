@@ -772,14 +772,16 @@ body {
 
 .socialburger {
     justify-content: center;
+    margin-bottom:10px;
 }
 
 .socialburger img {
-    width:30px;
-    height:30px;
-    margin: 0px;
-    margin-top:10px;
-    margin-bottom:10px;
+    width:30px !important;
+    height:30px !important;
+    margin: 0px !important;
+    margin-top:10px !important;
+    margin-bottom:10px !important;
+    position:unset !important;
 }
 
 /*  === MISE EN PAGE DIVERS === */
