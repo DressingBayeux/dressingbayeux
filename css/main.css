@@ -50,7 +50,7 @@ img {
 
 .aligncenter {
     align-items: center;
-    margin:30px 0px;
+    padding:30px 0px;
 }
 
 .btn-burger-toggle {
@@ -154,7 +154,20 @@ nav ul li a:active {
     display:flex;
     flex-wrap:wrap;
     align-items: center;
+    position: relative;
 }
+
+.slider-flounoir {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.352000175070028) 100%);
+    width:100vw;
+    height:520px;
+    max-height:520px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:2;
+}
+
 .absoluteright {
     position:absolute;
     right:10px;
@@ -166,7 +179,7 @@ nav ul li a:active {
 .prevbutton {
     border:unset;
     cursor:pointer;
-    z-index:1;
+    z-index:10;
     background:unset;
 }
 .prevbutton img {
@@ -188,11 +201,11 @@ nav ul li a:active {
 }
 .slicker {
     overflow:hidden;
-    position:relative;
     width:100vw;
     height:520px;
 }
 .slicker img {
+    position: sticky;
     min-height:520px;
     width:100vw;
     object-fit: cover;
@@ -206,24 +219,7 @@ nav ul li a:active {
     left:60px;
     padding:0px;
     margin:0px;
-}
-
-@media (max-width:768px) {
-    .boutonperso {
-        padding-left:30px;
-    }
-    .first-slide h1 {
-        margin-left:30px !important;
-        font-size:24px !important;
-        margin-bottom:150px !important;
-    }
-    .first-slide p {
-        margin-left:30px !important;
-        margin-bottom: 129px !important;
-    }
-    .first-slide a {
-        margin-right:30px !important;
-    }
+    z-index:10;
 }
 
 .boutonperso li {
@@ -243,16 +239,21 @@ nav ul li a:active {
 }
 
 .first-slide {
-    height:520px;
+    max-height:520px;
     width:100vw;
     position:relative;
+}
+
+.first-slide img {
+    position: sticky;
+    z-index:-10;
 }
 
 .first-slide h1 {
     position:absolute;
     bottom:0;
     left:0;
-    z-index:1;
+    z-index:10;
     margin:0;
     font-weight: 600;
     color:#ffffff;
@@ -266,7 +267,7 @@ nav ul li a:active {
     position:absolute;
     bottom:0px;
     left:60px;
-    z-index:1;
+    z-index:10;
     margin:0;
     color:#ffffff;
     font-size:14px;
@@ -279,7 +280,7 @@ nav ul li a:active {
     position:absolute;
     bottom:0;
     right:0;
-    z-index:1;
+    z-index:10;
     margin-bottom:40px;
     margin-right:60px;
     padding:14px 37px;
@@ -301,6 +302,24 @@ nav ul li a:active {
     transition-duration: 0.3s;
 }
 
+@media (max-width:768px) {
+    .boutonperso {
+        left:30px;
+    }
+    .first-slide h1 {
+        margin-left:30px !important;
+        font-size:24px !important;
+        margin-bottom:150px !important;
+    }
+    .first-slide p {
+        left:30px;
+        margin-bottom: 129px !important;
+    }
+    .first-slide a {
+        margin-right:30px !important;
+    }
+}
+
 /* PRODUITS PHARES */
 
 .produitsphares h1 {
@@ -317,6 +336,18 @@ nav ul li a:active {
     font-size:18px;
     margin-top:10px;
     margin-bottom:30px;
+}
+
+@media (max-width:768px) {
+    .produitsphares h1 {
+        text-align: center;
+    }
+    .produitsphares h6 {
+        text-align: center;
+    }
+    .produitcdc {
+        margin-bottom:20px;
+    }
 }
 
 .produitcdc img {
@@ -356,7 +387,7 @@ nav ul li a:active {
 }
 
 .btn-contact {
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.25);
     border-radius:3px;
     font-style:italic;
     font-weight:600;
@@ -364,6 +395,7 @@ nav ul li a:active {
     text-decoration: unset;
     text-transform: uppercase;
     font-size:21px;
+    background-color: #fff;
 }
 
 .btn-contact:hover,
@@ -378,7 +410,7 @@ nav ul li a:active {
 /* QUOTE */
 
 .quote-container {
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.25);
     border-radius:10px;
     margin-bottom:30px;
     align-items:center;
@@ -439,6 +471,32 @@ nav ul li a:active {
     margin:0px;
 }
 
+@media (max-width:768px) {
+    .quote-container img {
+        margin-top:10px;
+        margin-left:30px;
+        margin-bottom:10px;
+    }
+    .quote {
+        padding-top:0px;
+    }
+    .quote p {
+        padding:0px 20px;
+    }
+    .quote img {
+        width:140px;
+        height:100px;
+        top:0px;
+        margin-left:20px;
+    }
+    .quote h6 {
+        padding:0px 20px;
+    }
+    .mt-30device {
+        margin-top:30px;
+    }
+}
+
 .galerie {
     margin-bottom:90px;
 }
@@ -446,6 +504,7 @@ nav ul li a:active {
 .galerie img {
     border-radius:10px;
     height:240px;
+    object-fit: cover;
 }
 
 .galerieleft img {
@@ -455,6 +514,15 @@ nav ul li a:active {
 .galerietopright img {
     height:200px !important;
     object-fit: cover;
+}
+
+@media (max-width:768px) {
+    .galerieleft img {
+        object-fit: cover;
+    }
+    .galerie {
+        margin-bottom:40px;
+    }
 }
 
 /* COUPS DE COEUR */
@@ -521,18 +589,211 @@ nav ul li a:active {
     z-index:-1;
     top:-210px;
     right:45px;
+    object-fit: unset !important;
 }
 
 .relativedecor {
     position: relative;
 }
 
+.relativedecor img {
+    object-fit: cover;
+}
+
+
+@media (max-width:768px) {
+    .topcdcproducts img {
+        height:300px;
+    }
+    .bottomcdcproducts img {
+        height:300px;
+    }
+}
+
+/* CONTACT */
+
+.contact {
+    background-color: #161826;
+    margin-top:70px;
+}
+
+.contact h1 {
+    font-size:32px;
+    font-weight: 600;
+    font-style:italic;
+    text-transform: uppercase;
+    color:#fff;
+    text-align: center;
+    padding-top:30px;
+    margin:0;
+    padding-bottom:20px;
+}
+
+.contact p {
+    font-size:18px;
+    font-weight: 300;
+    font-style:italic;
+    color:#fff;
+    text-align: center;
+    margin:0;
+    padding-bottom:3px;
+}
+
 /*  === FOOTER === */
+
+footer {
+    align-items:center;
+    padding:20px 0px;
+}
+
+footer img {
+    width:250px;
+    padding-left:30px;
+    padding-right:30px;
+}
+
+footer p {
+    font-weight: 300;
+    font-style: italic;
+    font-size:16px;
+    color:#161826;
+}
+
+.centermep {
+    justify-content: center;
+}
+
+/* ==== BURGER ==== */
+
+body {
+    position: relative;
+}
+
+.burger-container {
+    display: flex;
+    height:100vh;
+    max-height:100vh;
+    width:100vw;
+    z-index:11;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    align-items: center;
+    overflow-y: hidden;
+    position:fixed;
+}
+
+.burger-container-content {
+    width:90vw;
+    z-index:12;
+    background-color: #fff;
+    border-radius:20px;
+    margin:auto;
+    position: relative;
+    align-items: center;
+}
+
+@media (min-width:768px) {
+    .burger-container-content {
+        width:30vw;
+    }
+}
+
+@media (min-width:768px) and (max-width:1200px) {
+    .burger-container-content {
+        width:40vw;
+    }
+}
+
+.burgermep {
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.burger-relative {
+    position: relative;
+}
+
+.burger-container ul {
+    display: block;
+    margin:0px;
+    text-align: center;
+    padding-left:0px;
+    margin-top:30px;
+    margin-bottom:20px;
+}
+
+.burger-container ul li {
+    list-style: none;
+    padding-top:7px;
+}
+
+.burger-container ul li a {
+    text-decoration: unset;
+    text-transform: uppercase;
+}
+
+.burger-container a img {
+    position: absolute;
+    width:25px;
+    height:25px;
+    margin-left:0px;
+    margin-right:20px;
+    margin-top:22px;
+    top:0px;
+    right:0px;
+}
+
+.burger-container h1 {
+    font-size:28px;
+    font-weight: 600;
+    font-style: italic;
+    color:#161826;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top:30px;
+    margin-bottom: 0px;
+}
+
+.burger-container img {
+    width:210px;
+    margin-top:20px;
+    margin-left:20px;
+}
+
+.burger-container p {
+    text-align: center;
+}
+
+.burger-container p span {
+    font-weight: 700;
+    font-size:18px;
+}
+
+.socialburger {
+    justify-content: center;
+}
+
+.socialburger img {
+    width:30px;
+    height:30px;
+    margin: 0px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
 
 /*  === MISE EN PAGE DIVERS === */
 
+.pb-30 {
+    padding-bottom: 30px !important;
+}
+
 .mr-15 {
-    margin-right:15px;
+    margin-right:7px !important;
+}
+
+.ml-15 {
+    margin-left:7px !important;
 }
 
 .mt-30 {
@@ -554,6 +815,18 @@ nav ul li a:active {
 
 .mt-75 {
     margin-top:50px
+}
+
+@media (max-width:768px) {
+    .centerdevicemobile {
+        text-align: center;
+    }
+    .mb30device {
+        margin-bottom:30px;
+    }
+    .mt30device {
+        margin-top:30px;
+    }
 }
 
 /* ======================================= */

@@ -28,6 +28,37 @@
 </head>
 
 <body>
+    <div class="burger-container" id="openburger" hidden>
+        <div class="burger-container-content">
+            <div class="row burgermep burger-relative">
+                <img src="images/LogoDressing.svg" alt="logo dressing">
+                <a href="#" onclick="openingburger()"><img src="images/croix.svg" alt="fermer"></a>
+            </div>
+            <ul>
+                <li><a href="index.html" class="nav-active" onclick="openingburger()">accueil</a></li>
+                <li><a href="index.html#produitsphares" onclick="openingburger()">nos produits phares</a></li>
+                <li><a href="index.html#le-dressing" onclick="openingburger()">à propos</a></li>
+                <li><a href="index.html#coupsdecoeurs" onclick="openingburger()">nos coups de coeur</a></li>
+                <li><a href="index.html#contact" onclick="openingburger()">nous contacter</a></li>
+            </ul>
+            <div class="row socialburger">
+                <img src="images/instagram.svg" alt="instagram" class="mr-15">
+                <img src="images/facebook.svg" alt="facebook" class="ml-15">
+            </div>
+        </div>
+    </div>
+    <div class="burger-container" id="opencontact" hidden>
+        <div class="burger-container-content">
+            <div class="row burgermep burger-relative">
+                <img src="images/LogoDressing.svg" alt="logo dressing">
+                <a href="#" onclick="openingcontact()"><img src="images/croix.svg" alt="fermer"></a>
+            </div>
+            <h1>Contactez-nous !</h1>
+            <p class="mt30device">ledressing.bayeux@gmail.com</p>
+            <p><span>09 54 58 65 62</span></p>
+            <p class="mb30device">Adresse : 40 rue St Martin, Bayeux, France</p>
+        </div>
+    </div>
     <header>
         <div class="row aligncenter">
             <!-- burger -->
@@ -38,38 +69,25 @@
                 <img src="images/LogoDressing.svg" alt="Le Dressing" title="Le Dressing">
             </div>
             <div class="header-social row">
-                <a href="#" class="social-icon mr-15">
+                <a href="https://www.instagram.com/ledressing.bayeux/" class="social-icon mr-15">
                     <img src="images/instagram.svg" alt="instagram">
                 </a>
-                <a href="#" class="social-icon">
+                <a href="https://www.facebook.com/leDressing.Bayeux" class="social-icon">
                     <img src="images/facebook.svg" alt="facebook">
                 </a>
             </div>
         </div>
         <nav>
             <ul class="row">
-                <li><a href="" class="nav-active">accueil</a></li>
-                <li><a href="">nos produits phares</a></li>
-                <li><a href="">à propos</a></li>
-                <li><a href="">nos coups de coeur</a></li>
-                <li><a href="">nous contacter</a></li>
+                <li><a href="index.html" class="nav-active">accueil</a></li>
+                <li><a href="index.html#produitsphares">nos produits phares</a></li>
+                <li><a href="index.html#le-dressing">à propos</a></li>
+                <li><a href="index.html#coupsdecoeurs">nos coups de coeur</a></li>
+                <li><a href="index.html#contact">nous contacter</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <!-- <div class="slider">
-            <button class="prevbutton absoluteleft" onclick="$('.slicker').slick('slickPrev')">
-                <img src="images/left-arrow.svg" alt="previous">
-            </button>
-            <div class="slicker">
-                <img class="single-item" src="images/slider/slider1.png" alt="image 1">
-                <img class="single-item" src="images/slider/slider2.png" alt="image 2">
-                <img class="single-item" src="images/slider/slider3.png" alt="image 3">
-            </div>
-            <button class="prevbutton absoluteright" onclick="$('.slicker').slick('slickNext')" id="slideNext">
-                <img src="images/right-arrow.svg" alt="next">
-            </button>
-        </div> -->
         <div class="slider">
             <button class="prevbutton absoluteleft" onclick="$('.slicker').slick('slickPrev')">
                 <img src="images/prevbutton.svg" alt="previous">
@@ -78,27 +96,33 @@
                 <div class="first-slide">
                     <h1>nos coups de coeur</h1>
                     <p>À ne pas manquer</p>
-                    <a href="#">découvrir</a>
+                    <a href="index.html#coupsdecoeurs">découvrir</a>
+                    <div class="slider-flounoir">
+                    </div>
                     <img class="single-item" src="images/slider/slider1.png" alt="#">
                 </div>
                 <div class="first-slide">
                     <h1>le dressing</h1>
                     <p>Qui sommes-nous ?</p>
-                    <a href="#">découvrir</a>
+                    <a href="index.html#le-dressing">découvrir</a>
+                    <div class="slider-flounoir">
+                    </div>
                     <img class="single-item" src="images/slider/slider2.png" alt="#">
                 </div>
                 <div class="first-slide">
                     <h1>nos produits phares</h1>
                     <p>Nos immanquables</p>
-                    <a href="#">découvrir</a>
-                    <img class="single-item" src="images/slider/slider3.png" alt="#">
+                    <a href="index.html#produitsphares">découvrir</a>
+                    <div class="slider-flounoir">
+                    </div>
+                    <img class="single-item" src="images/produitsphares/npp3.jpeg" alt="#">
                 </div>
             </div>
             <button class="prevbutton absoluteright" onclick="$('.slicker').slick('slickNext')">
                 <img src="images/nextbutton.svg" alt="next">
             </button>
         </div>
-        <section class="produitsphares">
+        <section class="produitsphares" id="produitsphares">
             <div class="container">
                 <h1>nos produits phares</h1>
                 <h6>Découvrez les produits qui rencontrent le plus de succès au Dressing</h6>
@@ -106,7 +130,7 @@
                     <div class="produitcdc col-xl-4 col-md-4 col-sm-2">
                         <img src="images/produitsphares/npp2.jpeg" alt="">
                         <h3>Robe d'été</h3>
-                        <p>La petite frdançaise</p>
+                        <p>La petite française</p>
                         <h2>59€90</h2>
                     </div>
                     <div class="produitcdc col-xl-4 col-md-4 col-sm-2">
@@ -123,11 +147,11 @@
                     </div>
                 </div>
                 <div class="center">
-                    <a href="" class="btn-contact">nous contacter</a>
+                    <a href="#" class="btn-contact" onclick="closingcontact()">nous contacter</a>
                 </div>
             </div>
         </section>
-        <section class="le-dressing">
+        <section class="le-dressing" id="le-dressing">
             <div class="container">
                 <div class="produitsphares">
                     <h1>Le dressing</h1>
@@ -135,7 +159,7 @@
                 <h3>Qui sommes-nous ?</h3>
                 <div class="quote-container row">
                     <img src="images/Isa.png" alt="Isabelle Lemercier photo">
-                    <div class="quote col-xl-9">
+                    <div class="quote col-xl-9 col-md-8">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis est pulvinar tincidunt convallis. Morbi laoreet nulla non fermentum ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis est pulvinar tincidunt convallis. Morbi laoreet nulla non fermentum ornare.  </p>
                         <h6>Isabelle Lemercier - Co-gérante du Dressing</h6>
                         <img src="images/quote.svg" alt="quote">
@@ -144,7 +168,7 @@
                 <h3>Quels sont nos objectifs ?</h3>
                 <div class="quote-container row">
                     <img src="images/Isa.png" alt="Isabelle Lemercier photo">
-                    <div class="quote col-xl-9">
+                    <div class="quote col-xl-9 col-md-8">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis est pulvinar tincidunt convallis. Morbi laoreet nulla non fermentum ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis est pulvinar tincidunt convallis. Morbi laoreet nulla non fermentum ornare. Fusce mollis est pulvinar tincidunt convallis. Morbi laoreet nulla non fermentum ornare. </p>
                         <h6>Florence Gauthier Lair - Co-gérante du Dressing</h6>
                         <img src="images/quote.svg" alt="quote">
@@ -152,10 +176,10 @@
                 </div>
                 <h3>Notre boutique</h3>
                 <div class="row between galerie">
-                    <div class="col-xl-7 galerieleft">
+                    <div class="col-xl-7 col-md-7 col-sm-2 galerieleft">
                         <img src="images/boutique/3.jpeg" alt="devanture">
                     </div>
-                    <div class="col-xl-5">
+                    <div class="col-xl-5 col-md-5 col-sm-2 mt-30device">
                         <img src="images/boutique/2.jpeg" alt="">
                         <div class="galerietopright mt-30">
                             <img src="images/boutique/4.jpeg" alt="">
@@ -164,7 +188,7 @@
                 </div>
             </div>
         </section>
-        <section class="coupsdecoeurs">
+        <section class="coupsdecoeurs" id="coupsdecoeurs">
             <div class="container">
                 <div class="produitsphares">
                     <h1>nos coups de coeur</h1>
@@ -173,13 +197,13 @@
                 <div class="row between">
                     <div class="col-xl-6 col-md-6 leftcdcproducts">
                         <div class="row between topcdcproducts">
-                            <div class="col-xl-6 col-md-6">
+                            <div class="col-xl-6 col-md-6 col-sm-2">
                                 <img src="images/coupdecoeur/roberouge.png" alt="robe rouge">
                                 <h3>Robe rouge à motifs</h3>
                                 <p>Pepe Jeans</p>
                                 <h2>49€</h2>
                             </div>
-                            <div class="col-xl-6 col-md-6">
+                            <div class="col-xl-6 col-md-6 col-sm-2">
                                 <img src="images/coupdecoeur/pullpantalon.png" alt="pull pantalon">
                                 <h3>Pull et pantalon</h3>
                                 <p>Marque ?</p>
@@ -187,29 +211,31 @@
                             </div>
                         </div>
                         <div class="row between bottomcdcproducts">
-                            <div class="col-xl-6 col-md-6">
+                            <div class="col-xl-6 col-md-6 col-sm-2">
                                 <img src="images/coupdecoeur/tshirtanouk.png" alt="teeshirt">
                                 <h3>Tee-shirt coton</h3>
                                 <p>Anouk et Ninon</p>
                                 <h2>45€</h2>
                             </div>
-                            <div class="col-xl-6 col-md-6 mb-45">
+                            <div class="col-xl-6 col-md-6 col-sm-2 mb-45">
                                 <img src="images/coupdecoeur/pullmanches34.png" alt="pullmanches">
                                 <h3>Pull manches 3/4</h3>
                                 <p>Plusieurs couleurs disponible</p>
                                 <h2>65€</h2>
                             </div>
                         </div>
-                        <a href="#" class="btn-contact">nous contacter</a>
+                        <div class="centerdevicemobile">
+                            <a href="#" class="btn-contact" onclick="closingcontact(event)">nous contacter</a>
+                        </div>
                     </div>
                     <div class="col-xl-6 col-md-6 mt-75 rightcdcproducts">
                         <h2>la tenue du moment</h2>
                         <p>Marque : La petite française - 239€90</p>
                         <div class="row between relativedecor">
-                            <div class="col-xl-6">
+                            <div class="col-xl-6 col-md-6">
                                 <img src="images/focus/focus1.png" alt="image1"> 
                             </div>
-                            <div class="col-xl-6">
+                            <div class="col-xl-6 col-md-6 mt-30device">
                                 <img src="images/focus/focus2.png" alt="image2" class="mb-30">
                                 <img src="images/focus/focus3.png" alt="image3">
                                 <div class="mise-en-pagedecor">
@@ -221,7 +247,12 @@
                 </div>
             </div>
         </section>
-        </main>
+        <section class="contact" id="contact">
+            <h1>nous contacter</h1>
+            <p>ledressing.bayeux@gmail.com</p>
+            <p>09 54 58 65 62</p>
+            <p class="pb-30">Adresse : 40 rue St Martin, Bayeux, France</p>
+        </section>
     
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -229,7 +260,11 @@
         <script src="index.js"></script>
     </main>
     <footer>
-
+        <div class="row centermep">
+            <p>Le Dressing… © 2022</p>
+            <img src="images/LogoDressing.svg" alt="logo dressing...">
+            <p>Mentions légales</p>
+        </div>
     </footer>
     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
